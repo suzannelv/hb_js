@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Document</title>
+        <style>
+            form {
+                margin: auto;
+                text-align: center;
+                margin-top: 200px;
+                padding: 20px;
+                width: 50%;
+                background-color: rgb(221, 228, 255);
+            }
+            form .el {
+                margin: 20px;
+            }
+            input {
+                border: transparent;
+                padding: 5px 10px;
+            }
+        </style>
+    </head>
+    <body>
+        <form action="" method="get">
+            <div class="el mail">
+                <label for="email">Enter your email: </label>
+                <input type="email" name="email" id="email" required />
+            </div>
+
+            <div class="el pwd">
+                <label for="pass">Mot de pass:</label>
+                <input
+                    type="password"
+                    id="pass"
+                    name="password"
+                    minlength="8"
+                    required
+                />
+            </div>
+            <div class="el pwd">
+                <label for="confirm">Confirmer votre mot de pass:</label>
+                <input
+                    type="password"
+                    id="confirm"
+                    name="password"
+                    minlength="8"
+                    required
+                />
+            </div>
+
+            <div class="el">
+                <input type="submit" value="Confirmer votre mot de pass" />
+            </div>
+
+            <div class="el">
+                <input type="submit" value="Connectez-vous" />
+            </div>
+        </form>
+    </body>
+</html>

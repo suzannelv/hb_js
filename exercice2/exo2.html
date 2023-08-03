@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Document</title>
+    </head>
+    <body>
+        <script>
+            // Exercice 2 : écrivez le code de la fonction isDateValid(year, month, day), qui renvoie true si la date est valide, false. sinon Votre main doit contenir un affichage en début de programme, le test de tous les cas possibles, et un affichage en fin de programme
+            function isYear(year) {
+                if (year > 0) return true;
+                return false;
+            }
+
+            function isMonth(month) {
+                if (month > 0 && month < 13) {
+                    return true;
+                }
+                return false;
+            }
+
+            function isDay(year, month, day) {
+                if (
+                    month === 1 ||
+                    month === 3 ||
+                    month === 5 ||
+                    month === 7 ||
+                    month === 8 ||
+                    month === 10 ||
+                    month === 12
+                ) {
+                    return day > 0 && day <= 31;
+                } else if (
+                    month === 4 ||
+                    month === 6 ||
+                    month === 9 ||
+                    month === 11
+                ) {
+                    return day > 0 && day <= 30;
+                } else if (month === 2) {
+                    if (
+                        (year % 4 === 0 && year % 100 !== 0) ||
+                        year % 400 === 0
+                    ) {
+                        return day > 0 && day <= 29;
+                    } else {
+                        return day > 0 && day <= 28;
+                    }
+                }
+                return false;
+            }
+
+            function isValidDate(year, month, day) {
+                return (
+                    isYear(year) && isMonth(month) && isDay(year, month, day)
+                );
+            }
+
+            function main() {
+                console.log("start");
+                console.log(isValidDate(23, 12, 32));
+                console.log(isValidDate(1200, -1, 12));
+                console.log(isValidDate(1200, 2, 28));
+                console.log(isValidDate(2023, 5, 3));
+                console.log("end");
+            }
+
+            main();
+        </script>
+    </body>
+</html>

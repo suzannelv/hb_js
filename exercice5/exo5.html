@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Document</title>
+    </head>
+    <body>
+        <script>
+            // méthode 1:
+            // function weightAverage(arr) {
+            //     let sumMarks = 0;
+            //     let sumWeight = 0;
+
+            //     for (let outerItem of arr) {
+            //         for (let innerItem of outerItem) {
+            //             sumMarks += outerItem[0] * outerItem[1];
+            //             sumWeight += outerItem[1];
+            //         }
+            //     }
+
+            //     return sumMarks / sumWeight;
+            // }
+
+            // méthode2:
+            function weightAverage(tab) {
+                let sumMarks = 0;
+                let sumWeight = 0;
+                let i = 0;
+                while (i < tab.length) {
+                    sumMarks = sumMarks + tab[i][0] * tab[i][1];
+                    sumWeight = sumWeight + tab[i][1];
+                    i++;
+                }
+                return sumMarks / sumWeight;
+            }
+
+            // moyenne = (15x2+12x4+7x1+13x5)/(2+4+1+5)
+            let notes = [
+                [15, 2],
+                [12, 4],
+                [7, 1],
+                [13, 5],
+            ];
+
+            let res = weightAverage(notes);
+            console.log(res);
+        </script>
+    </body>
+</html>

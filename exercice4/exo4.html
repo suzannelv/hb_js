@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Document</title>
+    </head>
+    <body>
+        <script>
+            console.log("début exo4");
+            function tabAVG(tab) {
+                let avg = 0;
+                let total = 0;
+                for (let item of tab) {
+                    total += item;
+                }
+                avg = total / tab.length;
+                return avg;
+            }
+
+            let tableau = [1, 2, 3];
+            let moyenne = tabAVG(tableau);
+            console.log("moyenne du tableau: " + moyenne);
+
+            // let i = 0;
+            // while (i < tableau.length) {
+            //     console.log(`le tableau ${i} contient la valeur ${tableau[i]}`);
+            //     i++;
+            // }
+        </script>
+    </body>
+</html>
