@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+        <title>Document</title>
+        <style>
+            * {
+                margin: 0;
+                padding: 0;
+            }
+
+            .error {
+                color: red;
+            }
+            .error:before {
+                content: "❌";
+            }
+            .ok {
+                color: green;
+            }
+            .ok:before {
+                content: "✅";
+            }
+        </style>
+    </head>
+    <body>
+        <form action="">
+            <label for="password">Mot de passe:</label>
+            <br />
+            <input type="password" id="password" />
+            <p class="majus error">Majuscule</p>
+            <p class="num error">Chiffre</p>
+            <p class="size error">Longuer:8+</p>
+            <input type="submit" id="sub" value="Valider" disabled />
+        </form>
+        <script src="./main.js"></script>
+    </body>
+</html>
